@@ -29,7 +29,7 @@ MongoClient.connect(url, function (err, client) {
 	})
 
 	app.get('/:term', async function (req, res) {
-		const [data] = await collection.find({ term: req.params.term }).toArray();
+		const [ data ] = await collection.find({ term: req.params.term }).toArray();
 
 		if (!_.isEmpty(data)) {
 			const { term, definition } = data;
