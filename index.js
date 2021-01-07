@@ -24,7 +24,7 @@ MongoClient.connect(url, function (err, client) {
 		res.render('index', { title: 'Добро пожаловать!', message: 'Добавьте к URL понятие через слеш для получения определения' });
 	});
 
-	app.get('/mindmap', (req, res) => {
+	app.get('/mindmap', (req, res) => {fd
 		res.sendFile(path.join(__dirname, 'mindmap.png'));
 	})
 
